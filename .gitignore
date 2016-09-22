@@ -1,0 +1,4 @@
+dotfiles/.vimbackup/*
+dotfiles/.vim/autoload
+dotfiles/.vim/plugged
+.bash/private.sh
