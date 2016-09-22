@@ -1,4 +1,5 @@
-## macOS Provisioning Script
+# macos-provisioning
+Provisioning script for macOS Sierra
 
 Install:
 
