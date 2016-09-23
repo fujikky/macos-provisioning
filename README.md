@@ -3,4 +3,6 @@ Provisioning script for macOS Sierra
 
 Install:
 
-    $ curl -fsSL https://raw.githubusercontent.com/fujikky/macos-provisioning/master/install.sh | sh
+```
+cd /tmp && curl -L git.io/viF41 -o macos-provisioning-master.zip && unzip macos-provisioning-master.zip && ./macos-provisioning-master/install.sh
+```
