@@ -2,7 +2,7 @@
 
 echo "Create dotfile symlinks..."
 
-cd $(dirname $0)/../dotfiles
+cd ${PWD}/dotfiles
 for dotfile in .?*; do
     case $dotfile in
         *.elc)
@@ -17,7 +17,8 @@ for dotfile in .?*; do
             continue;;
         *)
             echo "    ${HOME}/${dotfile}"
-            ln -fs "$PWD/$dotfile" $HOME
+            rm -rf $HOME/${dotfile}
+            cp -r "$PWD/$dotfile" $HOME
             ;;
     esac
 done
