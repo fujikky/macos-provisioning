@@ -13,6 +13,8 @@ else
   EXEC_TMP_DIR=0
 fi
 
+echo "Start install & setup scripts."
+
 cd $DIR_PATH && ${DIR_PATH}/scripts/create_dotfiles.sh
 cd $DIR_PATH && ${DIR_PATH}/scripts/install_brew.sh
 cd $DIR_PATH && ${DIR_PATH}/scripts/install_brew_cask.sh
@@ -22,6 +24,9 @@ cd $DIR_PATH && ${DIR_PATH}/scripts/setup_ruby.sh
 cd $DIR_PATH && ${DIR_PATH}/scripts/setup_node.sh
 cd $DIR_PATH && ${DIR_PATH}/scripts/install_xcode.sh
 
+echo "All install & setup scripts done!"
+
 if [ $EXEC_TMP_DIR == 1 ]; then
   rm -rf $DIR_PATH
+  echo "Deleted $DIR_PATH"
 fi
