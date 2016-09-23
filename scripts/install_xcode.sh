@@ -8,7 +8,7 @@ fi
 
 if [ "$XCODE_INSTALL_USER" == "" ]; then
   echo "XCODE_INSTALL_USER : "
-  read USXCODE_INSTALL_USER
+  read XCODE_INSTALL_USER
 fi
 
 if [ "$XCODE_INSTALL_PASSWORD" == "" ]; then
@@ -19,13 +19,16 @@ fi
 echo ""
 echo "Check lastest Xcode version..."
 
-LATEST_XCODE_VERSION=$(XCODE_INSTALL_USER=$XCODE_INSTALL_USER \
-                       XCODE_INSTALL_PASSWORD=$XCODE_INSTALL_PASSWORD \
-                       xcversion list|tail -n 1)
+LATEST_XCODE_VERSION=$(XCODE_INSTALL_USER=${XCODE_INSTALL_USER} \
+                       XCODE_INSTALL_PASSWORD=${XCODE_INSTALL_PASSWORD} \
+                       xcversion list | \
+                       grep -v beta | \
+                       egrep "^\d+(\.\d+(\.\d+)?)?" -o | \
+                       tail -n 1)
 
 # Invalid version check
-if [[ ! "$LATEST_XCODE_VERSION" =~ ^\d$ ]]; then
-  echo "Invalid credentials!"
+if [[ ! "${LATEST_XCODE_VERSION}" =~ ^[0-9] ]]; then
+  echo "Invalid credentials! \"${LATEST_XCODE_VERSION}\""
   exit 1
 fi
 
@@ -38,8 +41,8 @@ fi
 
 echo "Install Xcode ${LATEST_XCODE_VERSION}..."
 
-XCODE_INSTALL_USER=$XCODE_INSTALL_USER \
-XCODE_INSTALL_PASSWORD=$XCODE_INSTALL_PASSWORD \
-xcversion install $LATEST_XCODE_VERSION
+XCODE_INSTALL_USER=${XCODE_INSTALL_USER} \
+XCODE_INSTALL_PASSWORD=${XCODE_INSTALL_PASSWORD} \
+xcversion install ${LATEST_XCODE_VERSION}
 
 echo "Install Xcode ${LATEST_XCODE_VERSION}...Done!"
