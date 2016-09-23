@@ -14,7 +14,6 @@ brew install rbenv
 brew install jq
 brew install direnv
 brew install editorconfig
-brew install nodebrew
 brew install ruby-build
 brew install nginx
 brew install redis

@@ -1,6 +1,6 @@
 #!/bin/sh
 
-echo "Create dotfile symlinks..."
+echo "Create dotfiles..."
 
 cd ${PWD}/dotfiles
 for dotfile in .?*; do
@@ -26,4 +26,4 @@ done
 cd ~
 source ~/.bashrc
 
-echo "Create dotfile symlinks...Done!"
+echo "Create dotfiles...Done!"
