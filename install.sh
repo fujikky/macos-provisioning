@@ -13,20 +13,15 @@ else
   EXEC_TMP_DIR=0
 fi
 
-SCRIPTS=(create_dotfiles.sh \
-         install_brew.sh \
-         install_brew_cask.sh \
-         install_mas.sh \
-         setup_vim.sh \
-         setup_ruby.sh \
-         setup_node.sh \
-         install_xcode.sh)
+cd $DIR_PATH && ${DIR_PATH}/scripts/create_dotfiles.sh
+cd $DIR_PATH && ${DIR_PATH}/scripts/install_brew.sh
+cd $DIR_PATH && ${DIR_PATH}/scripts/install_brew_cask.sh
+cd $DIR_PATH && ${DIR_PATH}/scripts/install_mas.sh
+cd $DIR_PATH && ${DIR_PATH}/scripts/setup_vim.sh
+cd $DIR_PATH && ${DIR_PATH}/scripts/setup_ruby.sh
+cd $DIR_PATH && ${DIR_PATH}/scripts/setup_node.sh
+cd $DIR_PATH && ${DIR_PATH}/scripts/install_xcode.sh
 
-for script in ${SCRIPTS[@]}; do
-  cd $DIR_PATH
-  sh ${DIR_PATH}/scripts/${script}
-done
-
-if [ EXEC_TMP_DIR ]; then
+if [ $EXEC_TMP_DIR == 1 ]; then
   rm -rf $DIR_PATH
 fi

@@ -11,6 +11,7 @@ source ~/.bashrc
 
 echo "Install node ${NODE_VERSION}"
 nodebrew install-binary $NODE_VERSION
+nodebrew use ${NODE_VERSION}
 
 echo "Install global npm packages..."
 
