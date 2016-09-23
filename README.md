@@ -3,4 +3,4 @@ Provisioning script for macOS Sierra
 
 Install:
 
-    $ ./install.sh
+    $ curl -fsSL https://raw.githubusercontent.com/fujikky/macos-provisioning/install.sh | sh
