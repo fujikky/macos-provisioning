@@ -12,6 +12,7 @@ brew cask install dropbox
 brew cask install google-chrome
 brew cask install google-japanese-ime
 brew cask install google-drive
+brew cask install google-photos-backup
 brew cask install firefox
 brew cask install iterm2
 brew cask install atom
