@@ -5,14 +5,20 @@ TMP_DIR="/tmp/macos-provisioning-master"
 
 echo "Start install & setup scripts."
 
-cd $TMP_DIR && ${TMP_DIR}/scripts/create_dotfiles.sh
-cd $TMP_DIR && ${TMP_DIR}/scripts/install_brew.sh
-cd $TMP_DIR && ${TMP_DIR}/scripts/install_brew_cask.sh
-cd $TMP_DIR && ${TMP_DIR}/scripts/install_mas.sh
-cd $TMP_DIR && ${TMP_DIR}/scripts/setup_vim.sh
-cd $TMP_DIR && ${TMP_DIR}/scripts/setup_ruby.sh
-cd $TMP_DIR && ${TMP_DIR}/scripts/setup_node.sh
-cd $TMP_DIR && ${TMP_DIR}/scripts/install_xcode.sh
+for script in \
+  "create_dotfiles.sh" \
+  "install_brew.sh" \
+  "install_brew_cask.sh" \
+  "install_mas.sh" \
+  "setup_vim.sh" \
+  "setup_ruby.sh" \
+  "setup_node.sh" \
+  "install_xcode.sh" \
+  "setpu_macos.sh"; do
+
+  cd $TMP_DIR
+  ${TMP_DIR}/scripts/${script}
+done
 
 echo "All install & setup scripts done!"
 

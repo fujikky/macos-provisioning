@@ -8,3 +8,6 @@ curl --silent -fLo ~/.vim/autoload/plug.vim --create-dirs \
 
 echo "Install vim-plug...Done!"
 echo "Reload .vimrc and :PlugInstall to install plugins."
+
+# create backup dir
+mkdir -p ~/.vimbackup
