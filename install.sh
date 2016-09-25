@@ -14,7 +14,7 @@ for script in \
   "setup_ruby.sh" \
   "setup_node.sh" \
   "install_xcode.sh" \
-  "setpu_macos.sh"; do
+  "setup_macos.sh"; do
 
   cd $TMP_DIR
   ${TMP_DIR}/scripts/${script}
