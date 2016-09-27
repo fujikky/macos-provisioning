@@ -31,6 +31,7 @@ brew cask install android-studio
 brew cask install genymotion
 brew cask install 1password
 brew cask install vlc
+brew cask install docker
 
 echo "Install Homebrew Cask packages...Done!"
 
