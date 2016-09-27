@@ -8,6 +8,9 @@ export JAVA_HOME=/Library/Java/Home
 ### Git
 export GIT_EDITOR="/usr/bin/vim"
 
+### EDITOR
+export EDITOR="/usr/bin/vim"
+
 ### Added by the Heroku Toolbelt
 if [[ -s "/usr/local/heroku/bin" ]] ; then
     export PATH="/usr/local/heroku/bin:$PATH"
@@ -35,4 +38,12 @@ fi
 # AppEngine
 if [[ -s "$HOME/SDK/go_appengine" ]] ; then
     export "PATH=$HOME/SDK/go_appengine:$PATH"
+fi
+
+# added by travis gem
+[ -f $HOME/.travis/travis.sh ] && source /Users/stud/.travis/travis.sh
+
+# direnv
+if [ `which direnv` ]; then
+  eval "$(direnv hook bash)"
 fi

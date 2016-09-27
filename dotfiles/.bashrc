@@ -123,6 +123,3 @@ fi
 if [ -f ~/.bash/private.sh ]; then
     source ~/.bash/private.sh
 fi
-
-# added by travis gem
-[ -f /Users/stud/.travis/travis.sh ] && source /Users/stud/.travis/travis.sh

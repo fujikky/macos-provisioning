@@ -23,7 +23,5 @@ for dotfile in .?*; do
     esac
 done
 
-cd ~
-source ~/.bashrc
-
 echo "Create dotfiles...Done!"
+echo "You should exec \`source ~/.bashrc\`"

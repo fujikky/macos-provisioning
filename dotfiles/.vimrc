@@ -82,6 +82,9 @@ syntax on
 "タブでウインドウを移動する
 map <tab> <C-w><C-w>
 
+"バックスペースを使えるように
+set backspace=indent,eol,start
+
 "ステータスラインに情報を表示
 set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [ASCII=\%03.3b]\ [HEX=\%02.2B]\ [POS=%04l,%04v][%p%%]\ [LEN=%L]
 set laststatus=2
@@ -94,7 +97,6 @@ filetype plugin on
 setlocal tabstop=4
 setlocal softtabstop=4
 setlocal shiftwidth=4
-"setlocal textwidth=80
 setlocal smarttab
 setlocal smartindent
 set fileencoding=utf-8
@@ -155,57 +157,6 @@ set fileformats=unix,dos,mac
 if exists('&ambiwidth')
 	set ambiwidth=double
 endif
-
-" filetype def
-au BufRead,BufNewFile *.erb            set filetype=html
-
-"" neocomplcache
-" Disable AutoComplPop.
-let g:acp_enableAtStartup = 0
-" Use neocomplcache.
-let g:neocomplcache_enable_at_startup = 1
-" Use smartcase.
-let g:neocomplcache_enable_smart_case = 1
-" Set minimum syntax keyword length.
-let g:neocomplcache_min_syntax_length = 3
-let g:neocomplcache_lock_buffer_name_pattern = '\*ku\*'
-
-" Define dictionary.
-let g:neocomplcache_dictionary_filetype_lists = {
-    \ 'default' : ''
-    \ }
-
-" Plugin key-mappings.
-inoremap <expr><C-g>     neocomplcache#undo_completion()
-inoremap <expr><C-l>     neocomplcache#complete_common_string()
-
- " neocomplcache
-let g:acp_enableAtStartup = 0
-let g:neocomplcache_enable_at_startup = 1
-let g:neocomplcache_enable_underbar_completion= 1
-let g:neocomplcache_min_syntax_length = 3
-"Define keyword.
-if !exists('g:neocomplcache_keyword_patterns')
-    let g:neocomplcache_keyword_patterns = {}
-endif
-let g:neocomplcache_keyword_patterns['default'] = '\h\w*'
-
-inoremap <expr><CR>  neocomplcache#smart_close_popup() . "\<CR>"
-" <TAB>: completion.
-inoremap <expr><Tab>  pumvisible() ? "\<C-n>" : "\<TAB>"
-" <C-h>, <BS>: close popup and delete backword char.
-inoremap <expr><C-h> neocomplcache#smart_close_popup()."\<C-h>"
-inoremap <expr><BS> neocomplcache#smart_close_popup()."\<C-h>"
-inoremap <expr><C-y>  neocomplcache#close_popup()
-inoremap <expr><C-e>  neocomplcache#cancel_popup()
-
-inoremap <expr><C-x><C-f> neocomplcache#manual_filename_complete()
-
-" Enter/Deleteキーで補完ウィンドウを閉じる
-inoremap <expr><silent> <CR> <SID>my_cr_function()
-function! s:my_cr_function()
-   return pumvisible() ? neocomplcache#close_popup() : "\<CR>"
-endfunction
 
 " 保存時にディレクトリがない場合に自動的に作る
 augroup vimrc-auto-mkdir  " {{{

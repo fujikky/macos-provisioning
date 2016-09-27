@@ -1,2 +1,2 @@
-" Podfile
-au BufNewFile,BufRead ejs	setf html
+au BufNewFile,BufRead ejs	set filetype=html
+au BufNewFile,BufRead erb	set filetype=html
