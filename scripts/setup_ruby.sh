@@ -2,9 +2,9 @@
 
 RUBY_VERSION=2.3.1
 
-echo "Install ruby ${NODE_VERSION}"
-rbenv install $NODE_VERSION
-rbenv global $NODE_VERSION
+echo "Install ruby ${RUBY_VERSION}"
+rbenv install $RUBY_VERSION
+rbenv global $RUBY_VERSION
 
 source ~/.bashrc
 
