@@ -18,11 +18,6 @@ if test -e (which rbenv)
     rbenv init - | source
 end
 
-# pyenv
-if test -e (which pyenv)
-    . (pyenv init - | psub)
-end
-
 # nodebrew
 if test -e $HOME/.nodebrew
     set -x PATH $HOME/.nodebrew/current/bin $PATH
