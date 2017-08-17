@@ -2,15 +2,21 @@
 
 " ========== vim-plug setting start ============
 
+if empty(glob('~/.vim/autoload/plug.vim'))
+	silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+		\ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+	autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
 call plug#begin('~/.vim/plugged')
 
 "install bundle
-Plug 'ruby.vim'
-Plug 'Sass'
-Plug 'vim-coffee-script'
-Plug 'vim-json-bundle'
-Plug 'Markdown'
-Plug 'jade.vim'
+Plug 'vim-scripts/ruby.vim'
+Plug 'vim-scripts/Sass'
+Plug 'vim-scripts/vim-coffee-script'
+Plug 'vim-scripts/vim-json-bundle'
+Plug 'vim-scripts/Markdown'
+Plug 'vim-scripts/jade.vim'
 
 call plug#end()
 
@@ -21,6 +27,11 @@ set fileencodings=ucs-bom,iso-2022-jp-3,iso-2022-jp,eucjp-ms,euc-jisx0213,euc-jp
 
 "新しい行のインデントを現在行と同じにする
 set autoindent
+
+"バックアップディレクトリを作成
+if empty(glob('~/.vimbackup'))
+	silent !mkdir -p ~/.vimbackup
+endif
 
 "バックアップファイルを作るディレクトリ
 set backupdir=$HOME/.vimbackup
@@ -99,7 +110,6 @@ setlocal softtabstop=4
 setlocal shiftwidth=4
 setlocal smarttab
 setlocal smartindent
-set fileencoding=utf-8
 
 " 文字コードの自動認識
 if &encoding !=# 'utf-8'

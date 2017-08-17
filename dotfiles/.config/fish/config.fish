@@ -13,4 +13,3 @@ case Linux
         source ~/.config/fish/os/linux.fish
     end
 end
-

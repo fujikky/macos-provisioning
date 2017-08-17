@@ -1,0 +1,20 @@
+#!/bin/sh
+
+echo "Instal macos-provisioning"
+
+ZIP_PATH="/tmp/macos-provisioning-master.zip"
+TMP_DIR="/tmp/macos-provisioning-master"
+
+cd /tmp
+curl -L git.io/viF41 -o macos-provisioning-master.zip
+unzip macos-provisioning-master.zip
+./macos-provisioning-master/scripts/install.sh
+
+rm -rf $TMP_DIR
+echo "Deleted $TMP_DIR"
+
+rm -rf $ZIP_PATH
+echo "Deleted $ZIP_PATH"
+
+echo "Start fish session"
+/usr/local/bin/fish

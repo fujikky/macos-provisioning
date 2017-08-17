@@ -9,21 +9,21 @@ set -x GIT_EDITOR /usr/bin/vim
 set -x EDITOR /usr/bin/vim
 
 # homebrew
-if test -e (which brew)
+if test -x /usr/local/bin/brew
     set -x PATH /usr/local/bin /usr/local/sbin $PATH
 end
 
 # rbenv
-if test -e (which rbenv)
+if test -x /usr/local/bin/rbenv
     rbenv init - | source
 end
 
 # nodebrew
-if test -e $HOME/.nodebrew
+if test -d $HOME/.nodebrew
     set -x PATH $HOME/.nodebrew/current/bin $PATH
 end
 
 # direnv
-if test -e (which direnv)
+if test -x /usr/local/bin/direnv
     eval (direnv hook fish)
 end

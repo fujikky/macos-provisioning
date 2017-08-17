@@ -17,11 +17,9 @@ for dotfile in .?*; do
             continue;;
         *)
             echo "    ${HOME}/${dotfile}"
-            rm -rf $HOME/${dotfile}
-            cp -r "$PWD/$dotfile" $HOME
+            cp -Rf "$PWD/$dotfile" $HOME
             ;;
     esac
 done
 
 echo "Create dotfiles...Done!"
-echo "You should exec \`source ~/.bashrc\`"

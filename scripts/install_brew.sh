@@ -29,11 +29,13 @@ brew install \
   dnsmasq \
   editorconfig \
   fish \
+  fzf \
   ghq \
   imagemagick \
   jq \
   mysql \
   nginx \
+  peco \
   percona-toolkit \
   rbenv \
   redis \
