@@ -1,6 +1,5 @@
 #!/bin/sh
 
-# ZIP_PATH="/tmp/macos-provisioning-master.zip"
 BASEDIR=$(cd $(dirname $0)/.. && pwd)
 
 echo "Start install & setup scripts."
