@@ -27,21 +27,22 @@ brew install \
   carthage \
   direnv \
   dnsmasq \
+  rjcoelho/boneyard/dynamodb-local \
   editorconfig \
   fish \
   fzf \
   ghq \
   imagemagick \
   jq \
-  mysql \
+  mecab \
+  mysql@5.6 \
   nginx \
   peco \
-  percona-toolkit \
-  rbenv \
   redis \
-  ruby-build \
   tree \
   wget \
   yarn
+
+brew link mysql@5.6 --force
 
 echo "Install Homebrew packages...Done!"

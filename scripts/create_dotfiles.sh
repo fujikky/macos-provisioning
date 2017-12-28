@@ -17,6 +17,7 @@ for dotfile in .?*; do
             continue;;
         *)
             echo "    ${HOME}/${dotfile}"
+            rm -rf ${HOME}/${dotfile}
             cp -Rf "$PWD/$dotfile" $HOME
             ;;
     esac

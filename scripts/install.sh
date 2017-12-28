@@ -9,8 +9,7 @@ for script in \
   "install_brew.sh" \
   "install_mas.sh" \
   "setup_fish.sh" \
-  "setup_ruby.sh" \
-  "setup_node.sh" \
+  "install_anyenv.sh" \
   "install_xcode.sh" \
   "setup_macos.sh"; do
 
