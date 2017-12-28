@@ -8,12 +8,12 @@ export PATH="$RBENV_ROOT/bin:$PATH"
 export NDENV_ROOT="$HOME/.anyenv/envs/ndenv"
 export PATH="$NDENV_ROOT/bin:$PATH"
 
-eval "$(anyenv init -)"
-
 if [ ! `which anyenv` ]; then
   echo "Install anyenv..."
   git clone https://github.com/riywo/anyenv ~/.anyenv
 fi
+
+eval "$(anyenv init -)"
 
 # Install Ruby
 
