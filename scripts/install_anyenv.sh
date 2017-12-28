@@ -45,15 +45,19 @@ rbenv rehash
 echo "Install global gem packages...Done!"
 
 
-# # Install Node
-#
-# if [ ! `which ndenv` ]; then
-#     echo "Install ndenv..."
-#     anyenv install ndenv
-# fi
-#
-# # latest LTS version
-# NODE_VERSION=$(curl -s https://nodejs.org/dist/index.json | jq -r '.[] | select(.lts != false) | .version' | head -1)
-# echo "Install Node ${NODE_VERSION}... (latest LTS version)"
-# ndenv install $NODE_VERSION
-# ndenv global $NODE_VERSION
+# Install Node
+
+if [ ! `which ndenv` ]; then
+    echo "Install ndenv..."
+    anyenv install ndenv
+fi
+
+# latest LTS version
+NODE_VERSION=$(curl -s https://nodejs.org/dist/index.json | jq -r '.[] | select(.lts != false) | .version' | head -1)
+if [[ "$(ndenv versions)" =~ "${NODE_VERSION}" ]]; then
+  echo "Node ${NODE_VERSION} is already installed"
+else
+  echo "Install Node ${NODE_VERSION}... (latest LTS version)"
+  ndenv install $NODE_VERSION
+  ndenv global $NODE_VERSION
+fi
