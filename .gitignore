@@ -1,7 +1,4 @@
 dotfiles/.vimbackup/*
 dotfiles/.vim/autoload
 dotfiles/.vim/plugged
-dotfiles/.config/fish/completions/*
-dotfiles/.config/fish/functions/*
-dotfiles/.config/fish/fishd.*
 .bash/private.sh

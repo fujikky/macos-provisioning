@@ -9,15 +9,18 @@ fi
 echo "Install Homebrew packages..."
 
 brew install \
+  awscli \
   Caskroom/cask/1password \
   Caskroom/cask/atom \
   Caskroom/cask/docker \
   Caskroom/cask/dropbox \
   Caskroom/cask/firefox \
-  Caskroom/cask/google-backup-and-sync \
   Caskroom/cask/google-chrome \
+  Caskroom/cask/google-drive-file-stream \
   Caskroom/cask/google-japanese-ime \
+  Caskroom/cask/gpg-suite \
   Caskroom/cask/iterm2 \
+  Caskroom/cask/minecraft \
   Caskroom/cask/sequel-pro \
   Caskroom/cask/sketch \
   Caskroom/cask/skitch \
@@ -26,23 +29,15 @@ brew install \
   Caskroom/cask/visual-studio-code \
   carthage \
   direnv \
-  dnsmasq \
-  rjcoelho/boneyard/dynamodb-local \
   editorconfig \
   fish \
   fzf \
   ghq \
   imagemagick \
   jq \
-  mecab \
-  mysql@5.6 \
-  nginx \
   peco \
-  redis \
   tree \
   wget \
-  yarn
-
-brew link mysql@5.6 --force
+  yarn --without-node
 
 echo "Install Homebrew packages...Done!"
