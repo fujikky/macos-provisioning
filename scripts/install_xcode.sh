@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 export PATH="$HOME/.anyenv/bin:$PATH"
 
@@ -10,7 +10,7 @@ eval "$(anyenv init -)"
 # Install xcode-install
 if [ ! `which xcversion` ]; then
   echo "Install xcode-install"
-  gem install xcode-install --no-ri --no-rdoc
+  gem install xcode-install
   rbenv rehash
 fi
 
@@ -20,12 +20,12 @@ XCODE_INSTALL_PASSWORD=""
 
 function get_latest_xcode_version() {
   if [ "$XCODE_INSTALL_USER" == "" ]; then
-    echo "XCODE_INSTALL_USER : "
+    echo -n "Developer Apple ID: "
     read XCODE_INSTALL_USER
   fi
 
   if [ "$XCODE_INSTALL_PASSWORD" == "" ]; then
-    echo "XCODE_INSTALL_PASSWORD : "
+    echo -n "Password: "
     read -s XCODE_INSTALL_PASSWORD
   fi
 

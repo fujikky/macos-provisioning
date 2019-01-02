@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 export PATH="$HOME/.anyenv/bin:$PATH"
 
@@ -32,17 +32,6 @@ else
   rbenv global $RUBY_VERSION
   rbenv shell $RUBY_VERSION
 fi
-
-echo "Install global gem packages..."
-
-gem install \
-  bundler \
-  ec2ssh \
-  --no-ri --no-rdoc
-
-rbenv rehash
-
-echo "Install global gem packages...Done!"
 
 
 # Install Node

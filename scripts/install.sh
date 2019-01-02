@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 BASEDIR=$(cd $(dirname $0)/.. && pwd)
 
@@ -8,10 +8,10 @@ for script in \
   "create_dotfiles.sh" \
   "install_brew.sh" \
   "install_mas.sh" \
-  "setup_fish.sh" \
+  "install_go.sh" \
   "install_anyenv.sh" \
-  "install_xcode.sh" \
-  "setup_macos.sh"; do
+  "setup_fish.sh" \
+  "install_xcode.sh"; do
 
   cd $BASEDIR
   ${BASEDIR}/scripts/${script}

@@ -12,11 +12,8 @@ call plug#begin('~/.vim/plugged')
 
 "install bundle
 Plug 'vim-scripts/ruby.vim'
-Plug 'vim-scripts/Sass'
-Plug 'vim-scripts/vim-coffee-script'
 Plug 'vim-scripts/vim-json-bundle'
 Plug 'vim-scripts/Markdown'
-Plug 'vim-scripts/jade.vim'
 
 call plug#end()
 
