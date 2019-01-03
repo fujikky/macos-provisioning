@@ -3,24 +3,12 @@
 echo "Create dotfiles..."
 
 cd ${PWD}/dotfiles
-for dotfile in .?*; do
-    case $dotfile in
-        *.elc)
-            continue;;
-        ..)
-            continue;;
-        .git)
-            continue;;
-        .gitignore)
-            continue;;
-        .gitmodules)
-            continue;;
-        *)
-            echo "    ${HOME}/${dotfile}"
-            rm -rf ${HOME}/${dotfile}
-            cp -Rf "$PWD/$dotfile" $HOME
-            ;;
-    esac
+mkdir -p "${HOME}/.config"
+files=(.gitignore_global .vim .vimrc .config/fish)
+for dotfile in ${files[@]}; do
+  echo "    ${HOME}/${dotfile}"
+  rm -rf ${HOME}/${dotfile}
+  ln -s "$PWD/$dotfile" "$HOME/$dotfile"
 done
 
 echo "Create dotfiles...Done!"

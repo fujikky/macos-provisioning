@@ -6,9 +6,12 @@ if [ ! `which mas` ]; then
   brew install mas
 fi
 
-echo -n "Apple ID: "
-read MAS_INSTALL_USER
-mas signin $MAS_INSTALL_USER
+mas account > /dev/null 2>&1
+if [ $? != 0 ] ; then
+  echo -n "Apple ID: "
+  read MAS_INSTALL_USER
+  mas signin $MAS_INSTALL_USER
+fi
 
 echo "Install Mac App Store packages..."
 
