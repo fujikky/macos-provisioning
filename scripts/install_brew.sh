@@ -21,7 +21,6 @@ brew install \
   imagemagick \
   jq \
   peco \
-  swiftformat \
   tree \
   wget \
   yarn
