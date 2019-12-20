@@ -9,19 +9,22 @@ fi
 echo "Install Homebrew packages..."
 
 brew install \
+  anyenv \
   awscli \
   carthage \
+  circleci \
   direnv \
   editorconfig \
   fish \
   fzf \
+  ghq \
   imagemagick \
   jq \
   peco \
+  swiftformat \
   tree \
-  wget
-
-brew install yarn --without-node
+  wget \
+  yarn
 
 brew cask install \
   1password \

@@ -1,7 +1,8 @@
 # anyenv
 if test -x $HOME/.anyenv
   set -x PATH $HOME/.anyenv/bin $PATH
-  # eval (anyenv init - fish) # not working...
+  # TODO: not works... https://github.com/anyenv/anyenv/issues/69
+  # eval (anyenv init - fish)
 end
 
 # rbenv
@@ -26,23 +27,23 @@ if test -x $HOME/.anyenv/envs/rbenv
   end
 end
 
-# ndenv
-if test -x $HOME/.anyenv/envs/ndenv
-  set -x NDENV_ROOT "$HOME/.anyenv/envs/ndenv"
-  set -x PATH "$NDENV_ROOT/bin" $PATH
+# nodenv
+if test -x $HOME/.anyenv/envs/nodenv
+  set -x NODENV_ROOT "$HOME/.anyenv/envs/nodenv"
+  set -x PATH "$NODENV_ROOT/bin" $PATH
 
-  set -gx PATH "$NDENV_ROOT/shims" $PATH
-  set -gx NDENV_SHELL fish
-  command ndenv rehash 2>/dev/null
-  function ndenv
+  set -gx PATH "$NODENV_ROOT/shims" $PATH
+  set -gx NODENV_SHELL fish
+  command nodenv rehash 2>/dev/null
+  function nodenv
     set command $argv[1]
     set -e argv[1]
 
     switch "$command"
     case rehash shell
-      eval (ndenv sh-"$command" $argv|psub)
+      eval (nodenv sh-"$command" $argv|psub)
     case '*'
-      command ndenv "$command" $argv
+      command nodenv "$command" $argv
     end
   end
 end

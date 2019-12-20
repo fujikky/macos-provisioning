@@ -1,23 +1,11 @@
-# git-clean-branches
-#
-# * Will delete all fully merged local branches
-#   and any closed remote branches.
-# * User is prompted to continue before deleting.
-# * Pass in -d or --dry-run to see what would happen without changing anything
-#
-# Credit to Rob Miller <rob@bigfish.co.uk>
-# Adapted from the original by Yorick Sijsling
-# See: https://gist.github.com/robmiller/5133264
-# Author John Schank
-# Errors are mine, use at your own risk.
-
-function git-clean-branches --description="Delete all fully merged local and remote branches"
+function git-clean-branches --no-scope-shadowing --description="Delete all fully merged local and remote branches"
     for option in $argv
         switch "$option"
             case -d --dry-run
                 set DRY_RUN true
             case \*
-                printf "Error: unknown option %s\n" $option
+                echo -e "\e[31;1mError: unknown option `$option`\e[m"
+                return 1
         end
     end
 
@@ -30,6 +18,11 @@ function git-clean-branches --description="Delete all fully merged local and rem
       git checkout master > /dev/null ^&1
       set ROOT_BRANCH "master"
       echo -e "\e[2m> git checkout master\e[0m"
+
+      if test $status -eq 1
+        echo -e "\e[31;1mError: git has uncommitted changes\e[m"
+        return 1
+      end
     end
 
     # Make sure we're working with the most up-to-date version of master.

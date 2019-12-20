@@ -5,14 +5,10 @@ export PATH="$HOME/.anyenv/bin:$PATH"
 export RBENV_ROOT="$HOME/.anyenv/envs/rbenv"
 export PATH="$RBENV_ROOT/bin:$PATH"
 
-export NDENV_ROOT="$HOME/.anyenv/envs/ndenv"
-export PATH="$NDENV_ROOT/bin:$PATH"
+export NODENV_ROOT="$HOME/.anyenv/envs/nodenv"
+export PATH="$NODENV_ROOT/bin:$PATH"
 
-if [ ! `which anyenv` ]; then
-  echo "Install anyenv..."
-  git clone https://github.com/riywo/anyenv ~/.anyenv
-fi
-
+anyenv install --init
 eval "$(anyenv init -)"
 
 # Install Ruby
@@ -36,17 +32,17 @@ fi
 
 # Install Node
 
-if [ ! `which ndenv` ]; then
-    echo "Install ndenv..."
-    anyenv install ndenv
+if [ ! `which nodenv` ]; then
+    echo "Install nodenv..."
+    anyenv install nodenv
 fi
 
 # latest LTS version
-NODE_VERSION=$(curl -s https://nodejs.org/dist/index.json | jq -r '.[] | select(.lts != false) | .version' | head -1)
-if [[ "$(ndenv versions)" =~ "${NODE_VERSION}" ]]; then
+NODE_VERSION=$(curl -s https://nodejs.org/dist/index.json | jq -r '.[] | select(.lts != false) | .version' | head -1 | sed 's/^v//')
+if [[ "$(nodenv versions)" =~ "${NODE_VERSION}" ]]; then
   echo "Node ${NODE_VERSION} is already installed"
 else
   echo "Install Node ${NODE_VERSION}... (latest LTS version)"
-  ndenv install $NODE_VERSION
-  ndenv global $NODE_VERSION
+  nodenv install $NODE_VERSION
+  nodenv global $NODE_VERSION
 fi
