@@ -8,3 +8,4 @@ dotfiles/.config/fish/functions/fisher.fish
 dotfiles/.config/fish/functions/fish_user_key_bindings.fish
 dotfiles/.config/fish/functions/__*.fish
 dotfiles/.config/fish/conf.d/ssh-agent.init.fish
+dotfiles/.config/fish/conf.d/ghq_key_bindings.fish
