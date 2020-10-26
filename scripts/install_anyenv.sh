@@ -11,6 +11,9 @@ export PATH="$NODENV_ROOT/bin:$PATH"
 anyenv install --init
 eval "$(anyenv init -)"
 
+mkdir -p $(anyenv root)/plugins
+git clone https://github.com/znz/anyenv-update.git $(anyenv root)/plugins/anyenv-update
+
 # Install Ruby
 
 if [ ! `which rbenv` ]; then
