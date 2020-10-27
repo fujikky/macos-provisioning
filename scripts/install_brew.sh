@@ -11,7 +11,6 @@ echo "Install Homebrew packages..."
 brew install \
   anyenv \
   awscli \
-  carthage \
   circleci \
   direnv \
   editorconfig \
@@ -22,12 +21,12 @@ brew install \
   jq \
   peco \
   tree \
-  wget \
-  yarn
+  wget
 
 brew cask install \
   1password \
-  atom \
+  authy \
+  discord \
   docker \
   dropbox \
   firefox \
@@ -37,11 +36,12 @@ brew cask install \
   gpg-suite \
   iterm2 \
   minecraft \
-  sequel-pro \
   sketch \
   skitch \
   slack \
   sourcetree \
-  visual-studio-code
+  tableplus \
+  visual-studio-code \
+  zoomus
 
 echo "Install Homebrew packages...Done!"

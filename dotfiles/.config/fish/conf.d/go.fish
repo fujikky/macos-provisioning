@@ -1,4 +1,4 @@
 # Go
 if test -d "$HOME/go"
-  set -x PATH $PATH $HOME/go/bin
+  set -g fish_user_paths "$HOME/go/bin" $fish_user_paths
 end

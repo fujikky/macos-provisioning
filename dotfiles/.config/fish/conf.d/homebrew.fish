@@ -1,4 +1,4 @@
 # homebrew
 if test -x /usr/local/bin/brew
-  set -x PATH $PATH /usr/local/sbin
+  set -g fish_user_paths /usr/local/sbin $fish_user_paths
 end

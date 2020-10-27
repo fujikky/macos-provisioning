@@ -20,6 +20,6 @@ mas install 539883307  # LINE
 mas install 425424353  # The Unarchiver
 mas install 1278508951 # Trello
 mas install 485812721  # TweetDeck
-mas install 1295203466 # Microsoft Remote Desktop 10
+mas install 1461845568 # Gifox 2
 
 echo "Install Mac App Store packages...Done!"
