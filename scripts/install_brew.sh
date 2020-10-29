@@ -40,6 +40,7 @@ brew cask install \
   skitch \
   slack \
   sourcetree \
+  spotify \
   tableplus \
   visual-studio-code \
   zoomus
