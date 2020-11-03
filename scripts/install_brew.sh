@@ -36,6 +36,7 @@ brew cask install \
   gpg-suite \
   iterm2 \
   minecraft \
+  ngrok \
   sketch \
   skitch \
   slack \
