@@ -35,7 +35,6 @@ brew cask install \
   google-japanese-ime \
   gpg-suite \
   iterm2 \
-  minecraft \
   ngrok \
   sketch \
   skitch \
