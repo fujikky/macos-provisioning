@@ -1,11 +1,5 @@
 #!/bin/bash
 
-# Install Homebrew
-if [ ! `which brew` ]; then
-  echo "Install Homebrew"
-  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-fi
-
 echo "Install Homebrew packages..."
 
 brew install \

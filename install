@@ -2,6 +2,12 @@
 
 echo "Start Provisioning..."
 
+# Install Homebrew
+if [ ! `which brew` ]; then
+  echo "Install Homebrew"
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+fi
+
 if ! git config --global user.name 2>&1 > /dev/null; then
     echo "> git config --global user.name \"Yusuke Fujiki"\"
     git config --global user.name "Yusuke Fujiki"
