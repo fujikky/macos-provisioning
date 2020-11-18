@@ -10,6 +10,7 @@ brew install \
   editorconfig \
   fish \
   fzf \
+  gh \
   ghq \
   imagemagick \
   jq \
@@ -20,6 +21,7 @@ brew install \
 brew cask install \
   1password \
   authy \
+  browserstacklocal \
   discord \
   docker \
   dropbox \
