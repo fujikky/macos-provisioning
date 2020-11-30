@@ -9,7 +9,8 @@ for script in \
   "install_brew.sh" \
   "install_mas.sh" \
   "install_anyenv.sh" \
-  "setup_fish.sh"; do
+  "setup_fish.sh" \
+  "setup_gpg.sh"; do
 
   cd $BASEDIR
   ${BASEDIR}/scripts/${script}
