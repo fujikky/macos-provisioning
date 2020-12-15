@@ -9,20 +9,18 @@ function git-clean-branches --no-scope-shadowing --description="Delete all fully
         end
     end
 
-    #  Make sure we're on master first
-    git checkout develop > /dev/null ^&1
-    if test $status -eq 0
+    if git checkout develop > /dev/null ^&1
       set ROOT_BRANCH "develop"
       echo -e "\e[2m> git checkout develop\e[0m"
-    else
-      git checkout master > /dev/null ^&1
+    else if git checkout master > /dev/null ^&1
       set ROOT_BRANCH "master"
       echo -e "\e[2m> git checkout master\e[0m"
-
-      if test $status -eq 1
-        echo -e "\e[31;1mError: git has uncommitted changes\e[m"
-        return 1
-      end
+    else if git checkout main > /dev/null ^&1
+      set ROOT_BRANCH "main"
+      echo -e "\e[2m> git checkout main\e[0m"
+    else
+      echo -e "\e[31;1mError: git has uncommitted changes\e[m"
+      return 1
     end
 
     # Make sure we're working with the most up-to-date version of master.
@@ -40,7 +38,7 @@ function git-clean-branches --no-scope-shadowing --description="Delete all fully
     # List all the branches that have been merged fully into master, and
     # then delete them. We use the remote master here, just in case our
     # local master is out of date.
-    set -l MERGED_LOCAL (git branch --merged origin/$ROOT_BRANCH | grep -v 'master$' | grep -v 'develop$' | string trim)
+    set -l MERGED_LOCAL (git branch --merged origin/$ROOT_BRANCH | grep -v 'main$' | grep -v 'master$' | grep -v 'develop$' | string trim)
     if test -n "$MERGED_LOCAL"
         echo
         echo "The following local branches are fully merged and will be removed:"
