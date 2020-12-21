@@ -38,6 +38,7 @@ brew cask install \
   sourcetree \
   spotify \
   tableplus \
+  virtualbox \
   visual-studio-code \
   zoomus
 
