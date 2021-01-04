@@ -18,7 +18,7 @@ brew install \
   tree \
   wget
 
-brew cask install \
+brew install --cask \
   1password \
   authy \
   browserstacklocal \
@@ -40,6 +40,6 @@ brew cask install \
   tableplus \
   virtualbox \
   visual-studio-code \
-  zoomus
+  zoom
 
 echo "Install Homebrew packages...Done!"
