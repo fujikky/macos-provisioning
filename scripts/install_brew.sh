@@ -4,6 +4,7 @@ echo "Install Homebrew packages..."
 
 brew install \
   anyenv \
+  aria2 \
   awscli \
   circleci \
   direnv \
@@ -15,6 +16,7 @@ brew install \
   imagemagick \
   jq \
   peco \
+  robotsandpencils/made/xcodes \
   tree \
   wget
 
