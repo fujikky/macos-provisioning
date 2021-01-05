@@ -34,6 +34,7 @@ brew install --cask \
   gpg-suite \
   iterm2 \
   ngrok \
+  postman \
   sketch \
   skitch \
   slack \
