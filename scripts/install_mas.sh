@@ -21,5 +21,6 @@ mas install 425424353  # The Unarchiver
 mas install 1278508951 # Trello
 mas install 485812721  # TweetDeck
 mas install 1461845568 # Gifox 2
+mas install 512464723  # AS Timer
 
 echo "Install Mac App Store packages...Done!"
