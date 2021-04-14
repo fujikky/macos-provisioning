@@ -6,6 +6,7 @@ brew install \
   anyenv \
   aria2 \
   awscli \
+  bluetoothconnector \
   circleci \
   direnv \
   editorconfig \
@@ -17,6 +18,7 @@ brew install \
   jq \
   peco \
   robotsandpencils/made/xcodes \
+  switchaudio-osx \
   tree \
   wget
 
