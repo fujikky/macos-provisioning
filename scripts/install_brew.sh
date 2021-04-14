@@ -22,6 +22,7 @@ brew install \
 
 brew install --cask \
   1password \
+  1password-cli \
   authy \
   browserstacklocal \
   discord \
@@ -33,8 +34,10 @@ brew install --cask \
   google-japanese-ime \
   gpg-suite \
   iterm2 \
+  miro \
   ngrok \
   postman \
+  redisinsight \
   sketch \
   skitch \
   slack \

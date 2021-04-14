@@ -22,5 +22,6 @@ mas install 1278508951 # Trello
 mas install 485812721  # TweetDeck
 mas install 1461845568 # Gifox 2
 mas install 512464723  # AS Timer
+mas install 1289583905 # Pixelmator Pro
 
 echo "Install Mac App Store packages...Done!"
