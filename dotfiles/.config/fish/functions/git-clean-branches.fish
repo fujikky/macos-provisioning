@@ -9,13 +9,13 @@ function git-clean-branches --no-scope-shadowing --description="Delete all fully
         end
     end
 
-    if git checkout develop > /dev/null ^&1
+    if git checkout develop &> /dev/null
       set ROOT_BRANCH "develop"
       echo -e "\e[2m> git checkout develop\e[0m"
-    else if git checkout master > /dev/null ^&1
+    else if git checkout master &> /dev/null
       set ROOT_BRANCH "master"
       echo -e "\e[2m> git checkout master\e[0m"
-    else if git checkout main > /dev/null ^&1
+    else if git checkout main &> /dev/null
       set ROOT_BRANCH "main"
       echo -e "\e[2m> git checkout main\e[0m"
     else
