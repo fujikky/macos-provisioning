@@ -4,7 +4,7 @@ echo "Create dotfiles..."
 
 cd ${PWD}/dotfiles
 mkdir -p "${HOME}/.config"
-files=(.gitignore_global .vim .vimrc .config/fish)
+files=(.gitignore_global .vim .vimrc .asdfrc .config/fish)
 for dotfile in ${files[@]}; do
   echo "    ${HOME}/${dotfile}"
   rm -rf ${HOME}/${dotfile}

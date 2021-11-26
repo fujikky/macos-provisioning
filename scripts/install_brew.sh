@@ -3,10 +3,9 @@
 echo "Install Homebrew packages..."
 
 brew install \
-  anyenv \
   aria2 \
+  asdf \
   awscli \
-  bluetoothconnector \
   circleci \
   direnv \
   editorconfig \
@@ -14,9 +13,12 @@ brew install \
   fzf \
   gh \
   ghq \
+  heroku \
   imagemagick \
   jq \
+  nginx \
   peco \
+  redis \
   robotsandpencils/made/xcodes \
   switchaudio-osx \
   tree \
@@ -26,13 +28,14 @@ brew install --cask \
   1password \
   1password-cli \
   authy \
+  aws-vault \
   browserstacklocal \
-  discord \
   docker \
   dropbox \
   firefox \
+  fork \
   google-chrome \
-  google-drive-file-stream \
+  google-drive \
   google-japanese-ime \
   gpg-suite \
   iterm2 \
@@ -40,10 +43,10 @@ brew install --cask \
   ngrok \
   postman \
   redisinsight \
-  sketch \
+  redisinsight \
+  session-manager-plugin \
   skitch \
   slack \
-  sourcetree \
   spotify \
   tableplus \
   virtualbox \

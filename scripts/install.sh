@@ -8,7 +8,7 @@ for script in \
   "create_dotfiles.sh" \
   "install_brew.sh" \
   "install_mas.sh" \
-  "install_anyenv.sh" \
+  "install_asdf.sh" \
   "setup_fish.sh" \
   "setup_gpg.sh"; do
 
