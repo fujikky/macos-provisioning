@@ -1,12 +1,14 @@
-#!/bin/bash
+#!/bin/bash -eu
 
-# Install Homebrew
+# Install mas
 if [ ! `which mas` ]; then
   echo "Install mas"
   brew install mas
 fi
 
+set +e
 mas account > /dev/null 2>&1
+set -e
 if [ $? != 0 ] ; then
   echo -n "Apple ID: "
   read MAS_INSTALL_USER

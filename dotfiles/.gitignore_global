@@ -1,7 +1,0 @@
-*~
-.DS_Store
-.vscode
-.envrc
-.ltcbin
-tunnel.log
-storybook-static

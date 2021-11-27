@@ -1,10 +1,14 @@
 # aliases
 
-alias be="bundle exec"
+alias g="git"
 
-alias dc="docker-compose"
+alias y="yarn"
 
-alias dockviz="docker run -it --rm -v /var/run/docker.sock:/var/run/docker.sock nate/dockviz"
+alias b="bundle"
+
+alias d="docker"
+
+alias ll="ls -lha"
 
 alias simulator="open (xcode-select -p)/Applications/Simulator.app"
 

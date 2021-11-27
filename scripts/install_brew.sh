@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -eu
 
 echo "Install Homebrew packages..."
 
@@ -13,14 +13,12 @@ brew install \
   fzf \
   gh \
   ghq \
-  heroku \
+  heroku/brew/heroku \
   imagemagick \
   jq \
   nginx \
   peco \
   redis \
-  robotsandpencils/made/xcodes \
-  switchaudio-osx \
   tree \
   wget
 
@@ -36,7 +34,6 @@ brew install --cask \
   fork \
   google-chrome \
   google-drive \
-  google-japanese-ime \
   gpg-suite \
   iterm2 \
   miro \
@@ -49,8 +46,11 @@ brew install --cask \
   slack \
   spotify \
   tableplus \
-  virtualbox \
   visual-studio-code \
+  xcodes \
   zoom
+
+# Not supported on M1 ...
+# - virtualbox
 
 echo "Install Homebrew packages...Done!"

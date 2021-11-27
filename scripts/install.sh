@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -eu
 
 BASEDIR=$(cd $(dirname $0)/.. && pwd)
 
@@ -9,7 +9,8 @@ for script in \
   "install_brew.sh" \
   "install_mas.sh" \
   "install_asdf.sh" \
-  "setup_fish.sh" \
+  "install_rust.sh" \
+  "setup_fish.fish" \
   "setup_gpg.sh"; do
 
   cd $BASEDIR
