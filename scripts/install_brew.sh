@@ -40,7 +40,6 @@ brew install --cask \
   ngrok \
   postman \
   redisinsight \
-  redisinsight \
   session-manager-plugin \
   skitch \
   slack \

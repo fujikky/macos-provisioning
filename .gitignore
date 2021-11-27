@@ -2,10 +2,11 @@ dotfiles/.vimbackup/*
 dotfiles/.vim/autoload
 dotfiles/.vim/plugged
 dotfiles/.vim/.netrwhist
-dotfiles/.config/fish/fish_variables
 dotfiles/.config/fish/completions
-dotfiles/.config/fish/functions/fisher.fish
-dotfiles/.config/fish/functions/fish_user_key_bindings.fish
-dotfiles/.config/fish/functions/__*.fish
-dotfiles/.config/fish/conf.d/ssh-agent.init.fish
 dotfiles/.config/fish/conf.d/ghq_key_bindings.fish
+dotfiles/.config/fish/conf.d/ssh-agent.init.fish
+dotfiles/.config/fish/fish_plugins
+dotfiles/.config/fish/fish_variables
+dotfiles/.config/fish/functions/__*.fish
+dotfiles/.config/fish/functions/fish_user_key_bindings.fish
+dotfiles/.config/fish/functions/fisher.fish

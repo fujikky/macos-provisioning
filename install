@@ -2,20 +2,6 @@
 
 echo "Start Provisioning..."
 
-if [ $(uname -m) = "arm64" ]; then
-  BREW_PATH=/opt/homebrew/bin/brew
-else
-  BREW_PATH=/usr/local/bin/brew
-fi
-
-# Install Homebrew
-if [ ! `which brew` ]; then
-  echo "Install Homebrew"
-  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
-fi
-
-eval $($BREW_PATH shellenv)
-
 if ! git config --global user.name 2>&1 > /dev/null; then
     echo "> git config --global user.name \"Yusuke Fujiki"\"
     git config --global user.name "Yusuke Fujiki"
@@ -47,4 +33,8 @@ cd ~/ghq/github.com/fujikky/macos-provisioning
 
 echo "Finish provisioning!"
 
-fish
+if [ $(uname -m) = "arm64" ]; then
+  /opt/homebrew/bin/fish
+else
+  /usr/local/bin/fish
+fi

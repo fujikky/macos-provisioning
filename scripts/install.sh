@@ -2,14 +2,27 @@
 
 BASEDIR=$(cd $(dirname $0)/.. && pwd)
 
-echo "Start install & setup scripts."
+if [ $(uname -m) = "arm64" ]; then
+  BREW_PATH=/opt/homebrew/bin/brew
+else
+  BREW_PATH=/usr/local/bin/brew
+fi
+
+# Install Homebrew
+if [ ! -x $BREW_PATH ]; then
+  echo "Install Homebrew"
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+fi
+eval "$($BREW_PATH shellenv)"
+
+echo "Start packages installation and setup scripts."
 
 for script in \
   "create_dotfiles.sh" \
   "install_brew.sh" \
   "install_mas.sh" \
-  "install_asdf.sh" \
   "install_rust.sh" \
+  "setup_asdf.sh" \
   "setup_fish.fish" \
   "setup_gpg.sh"; do
 
@@ -17,4 +30,4 @@ for script in \
   ${BASEDIR}/scripts/${script}
 done
 
-echo "All install & setup scripts done!"
+echo "All packages installation and setup scripts are complete!"

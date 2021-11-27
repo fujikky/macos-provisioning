@@ -1,5 +1,7 @@
 #!/bin/bash -eu
 
+. $(brew --prefix asdf)/libexec/asdf.sh
+
 # Install Ruby
 set +e
 asdf plugin add ruby https://github.com/asdf-vm/asdf-ruby.git
