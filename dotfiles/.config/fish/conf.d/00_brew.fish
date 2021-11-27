@@ -1,8 +1,11 @@
 # homebrew
-if test -x /usr/local/bin/brew
-  set -g fish_user_paths /usr/local/sbin $fish_user_paths
+
+if [ (uname -m) = "arm64" ]
+  set BREW_PATH /opt/homebrew/bin/brew
+else
+  set BREW_PATH /usr/local/bin/brew
 end
 
-if test -x /opt/homebrew/bin/brew
-  eval (/opt/homebrew/bin/brew shellenv)
+if test -x $BREW_PATH
+  eval ($BREW_PATH shellenv)
 end
