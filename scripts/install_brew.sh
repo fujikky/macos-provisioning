@@ -16,7 +16,11 @@ brew install \
   heroku/brew/heroku \
   imagemagick \
   jq \
+  libmaxminddb \
+  mecab \
+  mysql@5.7 \
   nginx \
+  openssl \
   peco \
   redis \
   tree \
@@ -47,7 +51,8 @@ brew install --cask \
   tableplus \
   visual-studio-code \
   xcodes \
-  zoom
+  zoom \
+  zulu
 
 # Not supported on M1 ...
 # - virtualbox

@@ -6,8 +6,6 @@ alias y="yarn"
 
 alias b="bundle"
 
-alias d="docker"
-
 alias ll="ls -lha"
 
 alias simulator="open (xcode-select -p)/Applications/Simulator.app"
