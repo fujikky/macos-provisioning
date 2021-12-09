@@ -9,3 +9,5 @@ alias ip="ifconfig -a | grep inet[^6] | sed 's/.*inet[^6][^0-9]*\([0-9.]*\)[^0-9
 
 alias ios-simulator="open (xcode-select -p)/Applications/Simulator.app"
 alias android-simulator="~/Library/Android/sdk/emulator/emulator -avd (~/Library/Android/sdk/emulator/emulator -list-avds | head)"
+
+alias gc="git-clean-branches"
