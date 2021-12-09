@@ -1,0 +1,5 @@
+[init]
+defaultBranch = main
+
+[alias]
+wip = commit -m 'tmp' --no-verify
