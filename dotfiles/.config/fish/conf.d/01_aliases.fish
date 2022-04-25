@@ -11,3 +11,4 @@ alias ios-simulator="open (xcode-select -p)/Applications/Simulator.app"
 alias android-simulator="~/Library/Android/sdk/emulator/emulator -avd (~/Library/Android/sdk/emulator/emulator -list-avds | head)"
 
 alias gc="git-clean-branches"
+alias dc="docker-compose"
