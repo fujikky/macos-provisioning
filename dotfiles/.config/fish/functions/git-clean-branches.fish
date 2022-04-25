@@ -2,21 +2,24 @@ function git-clean-branches --no-scope-shadowing --description="Delete all fully
     argparse -n git-clean-branches 'd/dry-run' 'b/branch=' -- $argv
     or return 1
 
-    if git checkout develop &> /dev/null
+    if git switch develop &> /dev/null
       set ROOT_BRANCH "develop"
-      echo -e "\e[2m> git checkout develop\e[0m"
-    else if git checkout main &> /dev/null
+      echo -e "\e[2m> git switch develop\e[0m"
+    else if git switch main &> /dev/null
       set ROOT_BRANCH "main"
-      echo -e "\e[2m> git checkout main\e[0m"
-    else if git checkout master &> /dev/null
+      echo -e "\e[2m> git switch main\e[0m"
+    else if git switch master &> /dev/null
       set ROOT_BRANCH "master"
-      echo -e "\e[2m> git checkout master\e[0m"
+      echo -e "\e[2m> git switch master\e[0m"
     else
       echo -e "\e[31;1mError: git has uncommitted changes\e[m"
       return 1
     end
 
     # Make sure we're working with the most up-to-date version of main.
+    git fetch
+    echo -e "\e[2m> git fetch\e[0m"
+
     git pull
     echo -e "\e[2m> git pull\e[0m"
 
@@ -47,7 +50,7 @@ function git-clean-branches --no-scope-shadowing --description="Delete all fully
     end
 
     if set -lq _flag_b
-      if git rev-parse --verify $_flag_b &> /dev/null
+      if git rev-parse --verify $_flag_b &> /dev/null || git rev-parse --verify origin/$_flag_b &> /dev/null
         echo -e "\e[2m> git switch $_flag_b\e[0m"
         git switch $_flag_b
       else
