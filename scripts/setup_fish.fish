@@ -6,3 +6,4 @@ end
 
 fisher install jorgebucaran/fisher
 fisher install decors/fish-ghq
+fisher install PatrickF1/fzf.fish
