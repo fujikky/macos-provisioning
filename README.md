@@ -1,5 +1,5 @@
 # macos-provisioning
-Provisioning script for macOS Mojave
+Provisioning script for macOS
 
 Install:
 
