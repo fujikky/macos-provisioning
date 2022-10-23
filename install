@@ -3,29 +3,34 @@
 echo "Start Provisioning..."
 
 if ! git config --global user.name 2>&1 > /dev/null; then
-    echo "> git config --global user.name \"Yusuke Fujiki"\"
-    git config --global user.name "Yusuke Fujiki"
+  echo -n "Your name: "
+  read GIT_NAME
+  echo "> git config --global user.name \"$GIT_NAME"\"
+  git config --global user.name "$GIT_NAME"
 fi
 
 if ! git config --global user.email 2>&1 > /dev/null; then
-    echo "> git config --global user.email yusuke@fujikkys.com"
-    git config --global user.email yusuke@fujikkys.com
+  echo -n "Your email: "
+  read GIT_EMAIL
+  echo "> git config --global user.email $GIT_EMAIL"
+  git config --global user.email $GIT_EMAIL
 fi
 
 if [ ! -e ~/.ssh/id_rsa.pub ]; then
-    echo "> ssh-keygen -t rsa -b 4096 -C \"yusuke@fujikkys.com\""
-    # https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
-    ssh-keygen -t rsa -b 4096 -C "yusuke@fujikkys.com"
+  EMAIL=$(git config --global user.email)
+  echo "> ssh-keygen -t rsa -b 4096 -C \"$EMAIL\""
+  # https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
+  ssh-keygen -t rsa -b 4096 -C "$EMAIL"
 
-    cat ~/.ssh/id_rsa.pub | pbcopy
-    open https://github.com/settings/ssh/new
-    echo "The public key has been copied to the clipboard."
-    echo -n "After saving the new key on GitHub, press enter: "
-    read ENTER
+  cat ~/.ssh/id_rsa.pub | pbcopy
+  open https://github.com/settings/ssh/new
+  echo "The public key has been copied to the clipboard."
+  echo -n "After saving the new key on GitHub, press enter: "
+  read ENTER
 fi
 
 if [ ! -d ~/ghq/github.com/fujikky/macos-provisioning ]; then
-    git clone git@github.com:fujikky/macos-provisioning.git ~/ghq/github.com/fujikky/macos-provisioning
+  git clone git@github.com:fujikky/macos-provisioning.git ~/ghq/github.com/fujikky/macos-provisioning
 fi
 
 cd ~/ghq/github.com/fujikky/macos-provisioning
