@@ -29,11 +29,13 @@ brew install \
 brew install --cask \
   1password \
   1password-cli \
+  android-studio \
   authy \
   aws-vault \
   browserstacklocal \
   docker \
   dropbox \
+  figma \
   firefox \
   fork \
   google-chrome \
@@ -42,7 +44,6 @@ brew install --cask \
   iterm2 \
   miro \
   ngrok \
-  postman \
   redisinsight \
   session-manager-plugin \
   skitch \
@@ -51,10 +52,6 @@ brew install --cask \
   tableplus \
   visual-studio-code \
   xcodes \
-  zoom \
-  zulu
-
-# Not supported on M1 ...
-# - virtualbox
+  zoom
 
 echo "Install Homebrew packages...Done!"
