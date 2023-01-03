@@ -22,8 +22,9 @@ for script in \
   "install_brew.sh" \
   "install_mas.sh" \
   "install_rust.sh" \
-  "setup_asdf.sh" \
   "setup_fish.fish" \
+  "setup_java.sh" \
+  "setup_asdf.sh" \
   "setup_gpg.sh"; do
 
   cd $BASEDIR

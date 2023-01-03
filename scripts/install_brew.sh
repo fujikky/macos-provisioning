@@ -15,14 +15,17 @@ brew install \
   ghq \
   heroku/brew/heroku \
   imagemagick \
+  java \
   jq \
   libmaxminddb \
+  libyaml \
   mecab \
   mysql@5.7 \
   nginx \
   openssl \
   peco \
   redis \
+  ruby-build \
   tree \
   wget
 

@@ -1,11 +1,10 @@
-#!/bin/bash -eu
+#!/bin/bash -el
 
 BASEDIR=$(cd $(dirname $0)/.. && pwd)
 
-
 if git config --global gpg.program 2>&1 > /dev/null && \
-   git config --global user.signingkey 2>&1 > /dev/null && \
-   git config --global commit.gpgsign 2>&1 > /dev/null; then
+  git config --global user.signingkey 2>&1 > /dev/null && \
+  git config --global commit.gpgsign 2>&1 > /dev/null; then
   echo "The GPG key is already set."
   exit 0
 fi

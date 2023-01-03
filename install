@@ -39,7 +39,7 @@ cd ~/ghq/github.com/fujikky/macos-provisioning
 echo "Finish provisioning!"
 
 if [ $(uname -m) = "arm64" ]; then
-  /opt/homebrew/bin/fish
+  /opt/homebrew/bin/fish -l
 else
-  /usr/local/bin/fish
+  /usr/local/bin/fish -l
 fi
