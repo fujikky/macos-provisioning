@@ -2,6 +2,7 @@
 
 alias g="git"
 alias y="yarn"
+alias p="pnpm"
 alias b="bundle"
 
 alias ll="ls -lha"
