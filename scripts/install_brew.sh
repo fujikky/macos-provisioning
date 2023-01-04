@@ -37,7 +37,6 @@ brew install --cask \
   aws-vault \
   browserstacklocal \
   docker \
-  dropbox \
   figma \
   firefox \
   fork \
@@ -47,12 +46,14 @@ brew install --cask \
   iterm2 \
   miro \
   ngrok \
+  openvpn-connect \
   redisinsight \
   session-manager-plugin \
   skitch \
   slack \
   spotify \
   tableplus \
+  tandem \
   visual-studio-code \
   xcodes \
   zoom
