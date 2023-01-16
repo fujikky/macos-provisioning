@@ -3,3 +3,4 @@ defaultBranch = main
 
 [alias]
 wip = commit -m 'tmp' --no-verify
+push-f = push --force-with-lease --force-if-includes
