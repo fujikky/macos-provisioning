@@ -31,4 +31,8 @@ asdf install golang latest
 asdf global golang latest
 echo "Install Go...Done!"
 
+echo "Install pnpm..."
+asdf plugin add pnpm
+echo "Install pnpm...Done!"
+
 echo "Setup asdf...Done!"
