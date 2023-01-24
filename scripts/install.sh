@@ -25,6 +25,7 @@ for script in \
   "setup_fish.fish" \
   "setup_java.sh" \
   "setup_asdf.sh" \
+  "setup_gh.sh" \
   "setup_gpg.sh"; do
 
   cd $BASEDIR
