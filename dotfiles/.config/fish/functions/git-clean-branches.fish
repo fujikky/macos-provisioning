@@ -22,6 +22,7 @@ function git-clean-branches --no-scope-shadowing --description="Delete all fully
     # then delete them. We use the remote main here, just in case our
     # local main is out of date.
     echo -e "\e[2m> gh poi\e[0m"
+    gh poi
 
     if set -lq _flag_b
       if git rev-parse --verify $_flag_b &> /dev/null || git rev-parse --verify origin/$_flag_b &> /dev/null
