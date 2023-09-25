@@ -35,15 +35,16 @@ brew install --cask \
   android-studio \
   authy \
   aws-vault \
-  browserstacklocal \
+  copilot-for-xcode \
   docker \
   figma \
   firefox \
   fork \
   google-chrome \
-  google-drive \
   gpg-suite \
   iterm2 \
+  logitech-camera-settings \
+  minecraft \
   miro \
   ngrok \
   openvpn-connect \
@@ -53,7 +54,6 @@ brew install --cask \
   slack \
   spotify \
   tableplus \
-  tandem \
   visual-studio-code \
   xcodes \
   zoom
