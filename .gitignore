@@ -12,3 +12,4 @@ dotfiles/.config/fish/functions/*
 !dotfiles/.config/fish/functions/dc-clean-rebuild.fish
 !dotfiles/.config/fish/functions/gi.fish
 !dotfiles/.config/fish/functions/git-clean-branches.fish
+!dotfiles/.config/fish/functions/find-unpushed-git-dirs.fish
