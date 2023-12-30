@@ -43,12 +43,9 @@ brew install --cask \
   google-chrome \
   gpg-suite \
   iterm2 \
-  logitech-camera-settings \
   minecraft \
   miro \
-  ngrok \
   openvpn-connect \
-  redisinsight \
   session-manager-plugin \
   skitch \
   slack \
