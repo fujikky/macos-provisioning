@@ -1,4 +1,4 @@
 # direnv
 if brew ls --versions direnv > /dev/null
-  eval (direnv hook fish)
+  direnv hook fish | source
 end
