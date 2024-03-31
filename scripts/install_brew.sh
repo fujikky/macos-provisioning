@@ -33,22 +33,20 @@ brew install --cask \
   1password \
   1password-cli \
   android-studio \
-  authy \
   aws-vault \
   copilot-for-xcode \
   docker \
-  figma \
   firefox \
   fork \
   google-chrome \
   gpg-suite \
   iterm2 \
   minecraft \
-  miro \
   openvpn-connect \
   session-manager-plugin \
   skitch \
   slack \
+  slack-cli \
   spotify \
   tableplus \
   visual-studio-code \
