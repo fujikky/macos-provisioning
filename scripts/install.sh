@@ -24,7 +24,7 @@ for script in \
   "install_rust.sh" \
   "setup_fish.fish" \
   "setup_java.sh" \
-  "setup_asdf.sh" \
+  "setup_mise.sh" \
   "setup_gh.sh" \
   "setup_gpg.sh"; do
 

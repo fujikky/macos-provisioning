@@ -4,7 +4,6 @@ echo "Install Homebrew packages..."
 
 brew install \
   aria2 \
-  asdf \
   awscli \
   circleci \
   direnv \
@@ -20,6 +19,7 @@ brew install \
   libmaxminddb \
   libyaml \
   mecab \
+  mise \
   mysql@5.7 \
   nginx \
   openssl \
@@ -27,6 +27,7 @@ brew install \
   redis \
   ruby-build \
   tree \
+  usage \
   wget
 
 brew install --cask \
