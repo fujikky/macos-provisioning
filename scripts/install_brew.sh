@@ -6,6 +6,7 @@ brew install \
   aria2 \
   awscli \
   circleci \
+  coreutils \
   direnv \
   editorconfig \
   fish \
@@ -20,7 +21,7 @@ brew install \
   libyaml \
   mecab \
   mise \
-  mysql@5.7 \
+  mysql \
   nginx \
   openssl \
   peco \
