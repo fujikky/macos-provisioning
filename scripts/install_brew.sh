@@ -5,8 +5,8 @@ echo "Install Homebrew packages..."
 brew install \
   aria2 \
   awscli \
-  circleci \
   coreutils \
+  deno \
   direnv \
   editorconfig \
   fish \
@@ -15,15 +15,15 @@ brew install \
   ghq \
   heroku/brew/heroku \
   imagemagick \
-  java \
   jq \
   libmaxminddb \
   libyaml \
+  lokalise2 \
   mecab \
+  mint \
   mise \
-  mysql \
+  mysql@8.0 \
   nginx \
-  openssl \
   peco \
   redis \
   ruby-build \
@@ -35,15 +35,25 @@ brew install --cask \
   1password \
   1password-cli \
   android-studio \
+  arc \
   aws-vault \
+  chatgpt \
   copilot-for-xcode \
   docker \
+  figma \
   firefox \
   fork \
   google-chrome \
+  google-cloud-sdk \
+  google-japanese-ime \
   gpg-suite \
   iterm2 \
+  logitech-camera-settings \
+  meetingbar \
+  microsoft-edge \
   minecraft \
+  miro \
+  ngrok \
   openvpn-connect \
   session-manager-plugin \
   skitch \
@@ -52,6 +62,7 @@ brew install --cask \
   spotify \
   tableplus \
   visual-studio-code \
+  warp \
   xcodes \
   zoom
 
