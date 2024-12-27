@@ -21,7 +21,6 @@ for script in \
   "create_dotfiles.sh" \
   "install_brew.sh" \
   "install_mas.sh" \
-  "install_rust.sh" \
   "setup_fish.fish" \
   "setup_java.sh" \
   "setup_mise.sh" \

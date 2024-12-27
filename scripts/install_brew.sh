@@ -18,12 +18,12 @@ brew install \
   jq \
   libmaxminddb \
   libyaml \
-  lokalise2 \
   mecab \
   mint \
   mise \
   mysql@8.0 \
   nginx \
+  openjdk \
   peco \
   redis \
   ruby-build \
@@ -45,10 +45,8 @@ brew install --cask \
   fork \
   google-chrome \
   google-cloud-sdk \
-  google-japanese-ime \
   gpg-suite \
   iterm2 \
-  logitech-camera-settings \
   meetingbar \
   microsoft-edge \
   minecraft \
@@ -56,7 +54,6 @@ brew install --cask \
   ngrok \
   openvpn-connect \
   session-manager-plugin \
-  skitch \
   slack \
   slack-cli \
   spotify \

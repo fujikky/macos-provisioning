@@ -2,7 +2,7 @@
 
 echo "Setup mise..."
 
-mise activate fish | source
+eval "$($(brew --prefix)/mise activate bash)"
 mise use -g usage
 
 echo "Install Ruby..."
@@ -21,5 +21,9 @@ mise plugins install pnpm -y
 mise install pnpm@latest
 mise use -g pnpm@latest
 echo "Install pnpm...Done!"
+
+echo "Install Rust..."
+mise install rust@latest
+mise use -g rust@latest
 
 echo "Setup mise...Done!"

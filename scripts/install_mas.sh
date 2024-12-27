@@ -23,6 +23,5 @@ mas install 409183694  # Keynote
 mas install 425424353  # The Unarchiver
 mas install 512464723  # AS Timer
 mas install 539883307  # LINE
-mas install 824171161  # Affinity Designer
 
 echo "Install Mac App Store packages...Done!"
