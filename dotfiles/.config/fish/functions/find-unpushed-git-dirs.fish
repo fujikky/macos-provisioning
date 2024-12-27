@@ -1,6 +1,8 @@
 #!/usr/bin/env fish
 
-for repo in (find $argv[1] -name ".git" -maxdepth 4 | xargs dirname)
+set root (ghq root)
+for repo in (ghq list)
+    set repo "$root/$repo"
     pushd $repo > /dev/null ^&1
 
     set changes (git status -uno | grep 'Your branch is ahead of')
