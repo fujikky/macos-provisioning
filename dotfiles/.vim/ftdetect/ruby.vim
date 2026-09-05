@@ -1,3 +1,2 @@
-au BufNewFile,BufRead Podfile,*.podspec      set filetype=ruby
-au BufNewFile,BufRead Deliverfile      set filetype=ruby
-au BufNewFile,BufRead Fastfile      set filetype=ruby
+" fastlane
+au BufNewFile,BufRead Fastfile,Deliverfile,Appfile,Matchfile set filetype=ruby
