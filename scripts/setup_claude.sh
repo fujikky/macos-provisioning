@@ -12,6 +12,13 @@ CLAUDE_PRIVATE_DIR="${CLAUDE_PRIVATE_DIR:-${PRIVATE_DIR}/claude}"
 
 echo "Setup Claude Code..."
 
+# Install Claude Code the way the docs recommend rather than through Homebrew.
+if [ ! -x "${HOME}/.local/bin/claude" ] && ! command -v claude > /dev/null 2>&1; then
+  echo "    installing Claude Code..."
+  curl -fsSL https://claude.ai/install.sh | bash \
+    || echo "    Failed to install Claude Code. Continuing."
+fi
+
 mkdir -p "${DEST}/hooks" "${DEST}/skills"
 
 link() {
