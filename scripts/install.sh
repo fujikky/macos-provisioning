@@ -19,11 +19,14 @@ echo "Start packages installation and setup scripts."
 
 for script in \
   "create_dotfiles.sh" \
+  "setup_macos.sh" \
   "install_brew.sh" \
   "install_mas.sh" \
   "setup_fish.fish" \
   "setup_java.sh" \
   "setup_mise.sh" \
+  "setup_private.sh" \
+  "setup_claude.sh" \
   "setup_gh.sh" \
   "setup_gpg.sh"; do
 
