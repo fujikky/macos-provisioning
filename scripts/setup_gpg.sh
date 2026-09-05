@@ -3,18 +3,34 @@
 # Use pinentry-mac for the passphrase prompt. Without it, GPG Suite's own
 # pinentry is used and signing from a terminal can fail with no dialog.
 GPG_AGENT_CONF="${HOME}/.gnupg/gpg-agent.conf"
-if [ ! -f "$GPG_AGENT_CONF" ]; then
-  echo "Setup gpg-agent..."
-  mkdir -p "${HOME}/.gnupg"
-  chmod 700 "${HOME}/.gnupg"
-  cat > "$GPG_AGENT_CONF" <<EOF
-default-cache-ttl 600
-max-cache-ttl 7200
-pinentry-program $(brew --prefix)/bin/pinentry-mac
-EOF
+GPG_AGENT_CONF_UPDATED=false
+
+# GPG Suite and gpg-agent write gpg-agent.conf on their own, so check for each
+# setting instead of the file. A conf that exists without pinentry-program
+# leaves gpg on the curses pinentry, which cannot open a dialog and fails with
+# "Inappropriate ioctl for device".
+add_gpg_agent_conf() {
+  grep -qE "^$1([[:space:]]|$)" "$GPG_AGENT_CONF" && return 0
+
+  echo "$1 $2" >> "$GPG_AGENT_CONF"
+  GPG_AGENT_CONF_UPDATED=true
+}
+
+echo "Setup gpg-agent..."
+
+mkdir -p "${HOME}/.gnupg"
+chmod 700 "${HOME}/.gnupg"
+touch "$GPG_AGENT_CONF"
+
+add_gpg_agent_conf default-cache-ttl 600
+add_gpg_agent_conf max-cache-ttl 7200
+add_gpg_agent_conf pinentry-program "$(brew --prefix)/bin/pinentry-mac"
+
+if [ "$GPG_AGENT_CONF_UPDATED" = true ]; then
   gpgconf --kill gpg-agent > /dev/null 2>&1 || true
-  echo "Setup gpg-agent...Done!"
 fi
+
+echo "Setup gpg-agent...Done!"
 
 if git config --global gpg.program > /dev/null 2>&1 && \
   git config --global user.signingkey > /dev/null 2>&1 && \
