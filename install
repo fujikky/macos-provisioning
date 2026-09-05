@@ -2,14 +2,14 @@
 
 echo "Start Provisioning..."
 
-if ! git config --global user.name 2>&1 > /dev/null; then
+if ! git config --global user.name > /dev/null 2>&1; then
   echo -n "Your name: "
   read GIT_NAME
   echo "> git config --global user.name \"$GIT_NAME"\"
   git config --global user.name "$GIT_NAME"
 fi
 
-if ! git config --global user.email 2>&1 > /dev/null; then
+if ! git config --global user.email > /dev/null 2>&1; then
   echo -n "Your email: "
   read GIT_EMAIL
   echo "> git config --global user.email $GIT_EMAIL"
