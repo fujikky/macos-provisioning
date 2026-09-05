@@ -35,7 +35,6 @@ brew install --cask --adopt \
   android-studio \
   chatgpt \
   claude \
-  claude-code-history-viewer \
   cleanshot \
   cloudflare-warp \
   cmux \
@@ -61,5 +60,10 @@ brew install --cask --adopt \
   visual-studio-code \
   xcodes-app \
   zoom
+
+# Only in a third-party tap, which Homebrew will not load until it is trusted.
+brew tap jhlee0409/tap
+brew trust --cask jhlee0409/tap/claude-code-history-viewer
+brew install --cask --adopt jhlee0409/tap/claude-code-history-viewer
 
 echo "Install Homebrew packages...Done!"
