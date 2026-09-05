@@ -17,7 +17,6 @@ fi
 echo "Install Mac App Store packages..."
 
 mas install 1289583905 # Pixelmator Pro
-mas install 409183694  # Keynote
 mas install 425424353  # The Unarchiver
 mas install 512464723  # AS Timer
 mas install 539883307  # LINE
