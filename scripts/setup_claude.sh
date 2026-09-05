@@ -6,7 +6,8 @@
 BASEDIR=$(cd $(dirname $0)/.. && pwd)
 SRC="${BASEDIR}/dotfiles/.claude"
 DEST="${HOME}/.claude"
-PRIVATE_DIR="${PRIVATE_DIR:-${HOME}/ghq/github.com/fujikky/macos-provisioning-private}"
+REPO_ROOT="$(ghq root 2>/dev/null || echo "${HOME}/ghq")"
+PRIVATE_DIR="${PRIVATE_DIR:-${REPO_ROOT}/github.com/fujikky/macos-provisioning-private}"
 CLAUDE_PRIVATE_DIR="${CLAUDE_PRIVATE_DIR:-${PRIVATE_DIR}/claude}"
 
 echo "Setup Claude Code..."

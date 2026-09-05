@@ -4,7 +4,8 @@
 # Never abort provisioning: it can be cloned later.
 
 PRIVATE_REPO="${PRIVATE_REPO:-git@github.com:fujikky/macos-provisioning-private.git}"
-PRIVATE_DIR="${PRIVATE_DIR:-${HOME}/ghq/github.com/fujikky/macos-provisioning-private}"
+REPO_ROOT="$(ghq root 2>/dev/null || echo "${HOME}/ghq")"
+PRIVATE_DIR="${PRIVATE_DIR:-${REPO_ROOT}/github.com/fujikky/macos-provisioning-private}"
 
 echo "Setup private repository..."
 
