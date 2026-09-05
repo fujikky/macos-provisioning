@@ -1,6 +1,21 @@
 #!/bin/bash -eu
 
+# The README runs this through 'bash <(curl ...)', which ignores the options on
+# the shebang line, so set them here too.
+set -eu
+
 echo "Start Provisioning..."
+
+# git comes with the Developer Tools, which are missing on a fresh machine.
+# Running git brings up the installer dialog, so keep retrying until it works.
+until git --version > /dev/null 2>&1; do
+  echo ""
+  echo "git is not available yet. Install the Developer Tools from the dialog."
+  echo -n "After the installation finishes, press enter: "
+  read ENTER || { echo ""; echo "Aborted."; exit 1; }
+done
+
+echo "$(git --version) is available."
 
 if ! git config --global user.name > /dev/null 2>&1; then
   echo -n "Your name: "
