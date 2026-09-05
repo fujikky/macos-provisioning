@@ -3,64 +3,63 @@
 echo "Install Homebrew packages..."
 
 brew install \
-  aria2 \
-  awscli \
-  coreutils \
+  colima \
   deno \
   direnv \
+  docker \
+  docker-buildx \
+  docker-compose \
   editorconfig \
   fish \
   fzf \
+  gemini-cli \
   gh \
   ghq \
   heroku/brew/heroku \
-  imagemagick \
   jq \
-  libmaxminddb \
-  libyaml \
-  mecab \
   mint \
   mise \
-  mysql@8.0 \
-  nginx \
-  openjdk \
   peco \
-  redis \
-  ruby-build \
+  pinentry-mac \
+  terminal-notifier \
   tree \
   usage \
+  uv \
   wget
 
-brew install --cask \
+# --adopt takes over apps that were installed outside of Homebrew,
+# which would otherwise abort the run.
+brew install --cask --adopt \
   1password \
   1password-cli \
   android-studio \
-  arc \
-  aws-vault \
   chatgpt \
-  copilot-for-xcode \
-  docker \
+  claude \
+  claude-code-history-viewer \
+  cleanshot \
+  cloudflare-warp \
+  cmux \
+  codex \
+  discord \
   figma \
   firefox \
   fork \
+  gcloud-cli \
   google-chrome \
-  google-cloud-sdk \
   gpg-suite \
   iterm2 \
   meetingbar \
   microsoft-edge \
+  microsoft-remote-desktop \
   minecraft \
   miro \
   ngrok \
-  openvpn-connect \
-  session-manager-plugin \
+  notion \
+  poedit \
   slack \
-  slack-cli \
   spotify \
-  tableplus \
   visual-studio-code \
-  warp \
-  xcodes \
+  xcodes-app \
   zoom
 
 echo "Install Homebrew packages...Done!"
