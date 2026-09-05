@@ -3,6 +3,7 @@
 echo "Install Homebrew packages..."
 
 brew install \
+  awscli \
   colima \
   deno \
   direnv \
