@@ -44,11 +44,17 @@ if [ ! -e ~/.ssh/id_rsa.pub ]; then
   read ENTER
 fi
 
-if [ ! -d ~/ghq/github.com/fujikky/macos-provisioning ]; then
-  git clone git@github.com:fujikky/macos-provisioning.git ~/ghq/github.com/fujikky/macos-provisioning
+REPO_DIR="${HOME}/ghq/github.com/fujikky/macos-provisioning"
+
+if [ ! -d "${REPO_DIR}/.git" ]; then
+  git clone git@github.com:fujikky/macos-provisioning.git "${REPO_DIR}"
+else
+  # Pick up whatever has been pushed since the last run.
+  git -C "${REPO_DIR}" pull --ff-only \
+    || echo "Could not update ${REPO_DIR}. Continuing with the current checkout."
 fi
 
-cd ~/ghq/github.com/fujikky/macos-provisioning
+cd "${REPO_DIR}"
 ./scripts/install.sh
 
 echo "Finish provisioning!"
