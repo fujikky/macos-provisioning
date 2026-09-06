@@ -17,6 +17,7 @@ It configures git and an SSH key, clones this repository into
 | --- | --- |
 | `install` | Entry point for a new machine |
 | `scripts/install.sh` | Installs Homebrew and runs each setup script in order |
+| `Brewfile` | Homebrew taps, formulae and casks installed by `brew bundle` |
 | `scripts/create_dotfiles.sh` | Symlinks `dotfiles/` into the home directory |
 | `scripts/setup_macos.sh` | Applies macOS preferences (keyboard, trackpad, Dock) |
 | `scripts/setup_claude.sh` | Places the Claude Code settings |
