@@ -63,9 +63,9 @@
       "Read(**/*.keystore)",
       "Read(**/*.token)",
       "Read(**/secrets/**)",
-      "Write(**/.env)",
-      "Write(**/.env.*)",
-      "Write(**/secrets/**)",
+      "Edit(**/.env)",
+      "Edit(**/.env.*)",
+      "Edit(**/secrets/**)",
       "mcp__supabase__execute_sql"
     ]
   }
